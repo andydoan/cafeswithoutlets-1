@@ -1,0 +1,41 @@
+{
+  "name": "xJayTea.github.io",
+  "version": "1.0.0",
+  "author": "JayTea",
+  "directories": {},
+  "scripts": {
+    "local": "cross-env NODE_ENV=local gulp watch",
+    "prod": "cross-env NODE_ENV=production gulp"
+  },
+  "engine": "node 6.3.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xJayTea/xJayTea.github.io.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "6.24.1",
+    "babel-loader": "7.0.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "chalk": "1.1.3",
+    "cross-env": "4.0.0",
+    "del": "2.2.2",
+    "graceful-fs": "4.1.11",
+    "gulp": "3.9.1",
+    "gulp-ruby-sass": "2.0.4",
+    "gulp-util": "3.0.8",
+    "progress-bar-webpack-plugin": "1.9.3",
+    "run-sequence": "1.2.2",
+    "webpack": "2.3.3",
+    "webpack-dev-server": "2.4.5",
+    "webpack-stream-fixed": "3.2.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  }
+}
