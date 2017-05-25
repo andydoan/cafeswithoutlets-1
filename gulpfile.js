@@ -118,10 +118,23 @@ var getWebpackConfig = function(serverConfig, progress_bar_message){
           ],
           loader: 'babel-loader',
           query: {
-            presets: ['es2015', 'react']
+            presets: ['es2015']
+          }
+        },
+        { /* Transpile all jsx in the jsx folder */
+          test: /\.(jsx|js)$/,
+          loader: 'babel-loader',
+          include: __dirname + '/jsx/',
+          query: {
+            presets: reactPresets
           }
         }
       ]
+    },
+    resolve: {
+      alias: {
+        jsx: __dirname + '/jsx',
+      }
     },
     plugins: getWebpackPlugins(serverConfig, progress_bar_message),
     output: {
@@ -170,10 +183,8 @@ gulp.task('webpack', function(cb){
 
     var devServer = new webpackDevServer(compiler, {
       hot: true,
-      proxy: {
-        '**' : {
-          target: serverConfig.origin
-        }
+      historyApiFallback: { // Always serve up index.html for all urls.
+        index: 'index.html'
       },
       stats: {
         hash: false,

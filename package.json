@@ -1,5 +1,5 @@
 {
-  "name": "xJayTea.github.io",
+  "name": "cafeswithoutlets",
   "version": "1.0.0",
   "author": "JayTea",
   "directories": {},
@@ -10,9 +10,15 @@
   "engine": "node 6.3.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:xJayTea/xJayTea.github.io.git"
+    "url": "git@github.com:xJayTea/cafeswithoutlets.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1"
+  },
   "devDependencies": {
     "babel-core": "6.24.1",
     "babel-loader": "7.0.0",
