@@ -1,0 +1,21 @@
+#mapContainer {
+  #map {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+
+    &.map-loading {
+      opacity: 0.1;
+    }
+  }
+
+  #mapLoading {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  }
+}

@@ -94,7 +94,7 @@ var getWebpackPlugins = function(serverConfig, progress_bar_message, completed_m
 
 var getWebpackConfig = function(serverConfig, progress_bar_message){
   var jsPath = serverConfig ? serverConfig.origin + ':' + serverConfig.port + '/' + serverConfig.jsPath : undefined
-  var webpackEntries = ['./js/app/application.js']
+  var webpackEntries = ['./js/app/main.js']
   var reactPresets = ['es2015', 'react']
 
   if (serverConfig){
@@ -234,7 +234,7 @@ gulp.task('webpack', function(cb){
     var progressMessage = chalk.cyan.bold('Bundling all your hard work:') + ' ' + chalk.bgMagenta('[:bar]') + ' ' + chalk.magenta.bold(':percent') + ' Running for :elapsed seconds'
     var webpackConfig = getWebpackConfig(null, progressMessage)
 
-    return gulp.src('./js/app/application.js')
+    return gulp.src('./js/app/main.js')
       .pipe(webpackStream(webpackConfig))
       .on('error', function(err) {
         cb(err)
